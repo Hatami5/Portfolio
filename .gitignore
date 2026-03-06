@@ -1,0 +1,17 @@
+# system files
+.DS_Store
+Thumbs.db
+
+# maps
+*.map
+
+# config
+prepros-6.config
+
+# build folders
+node_modules/
+dist/
+build/
+
+# logs
+*.log
