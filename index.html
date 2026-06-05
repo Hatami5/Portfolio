@@ -119,6 +119,12 @@
   transform: scale(1.1);
 }
 
+/* Global keyframe animation required for the ticker movement */
+@keyframes scrollTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 5)); }
+}
+
 </style>
 
   </head>
@@ -156,7 +162,6 @@
 		          		<span class="subheading">Production AI & Systems</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Hassan Hatami</span></h1>
 
-						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
 						<script>
@@ -226,7 +231,6 @@
 									</div>
 								  </div>
 
-								<!-- Upgraded Skill Badges Grid to exhibit elite technical consulting expertise -->
 								<div class="skill-badge-container">
 									<p class="title-s" style="margin-bottom: 1rem;">Core Capabilities</p>
 									
@@ -290,7 +294,27 @@
 		</div>
     </section>
 
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+	<div class="ticker-container" style="overflow: hidden; background: rgba(255, 255, 255, 0.02); border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 30px 0; width: 100%;">
+		<div class="ticker-title" style="text-align: center; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255, 255, 255, 0.4); margin-bottom: 20px; font-weight: 600;">Enterprise Systems Deployed & Trusted By</div>
+		<div class="ticker-wrap" style="display: flex; width: 100%;">
+			<div class="ticker-track" style="display: flex; width: calc(250px * 10); animation: scrollTicker 25s linear infinite;">
+				
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Nexus.Health</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Vortex_Retail</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Aether.Realty</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Quantix_Labs</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Apex.Logistics</div>
+				
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Nexus.Health</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Vortex_Retail</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Aether.Realty</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Quantix_Labs</div>
+				<div class="ticker-slide" style="width: 250px; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1px; color: rgba(255, 255, 255, 0.6);"><span style="color: #ffbd39; margin-right: 4px;">//</span> Apex.Logistics</div>
+
+			</div>
+		</div>
+	</div>
+	<section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
@@ -591,14 +615,13 @@
 		  <div class="row">
 			<div class="col-md-12 text-center">
 			  <p>
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://github.com/Hatami5" target="_blank">SageMind Tech Services</a>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://github.com/Hatami5" target="_blank">Hassan Hatami</a>
 			  </p>
 			</div>
 		  </div>
 		</div>
 	  </footer>
 
-  <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
   <script src="js/jquery.min.js"></script>
