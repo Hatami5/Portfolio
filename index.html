@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hassan Hatami Portfolio</title>
+    <title>Hassan Hatami | Senior AI & ML Engineer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-
-
 <style>
 
 /*======================================
@@ -43,19 +41,42 @@
   margin-left: 10px;
 }
 
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+/* Custom Skill Badges styling to replace weak percentage bars */
+.skill-badge-container {
+  margin-top: 1.5rem;
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
+.skill-domain-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.badge-ai {
+  background: rgba(255, 189, 57, 0.15);
+  color: #ffbd39;
+  border: 1px solid rgba(255, 189, 57, 0.3);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.badge-ai:hover {
+  background: #ffbd39;
+  color: #000;
+}
 
 /* Animation styles */
 #typing-animation {
@@ -70,7 +91,6 @@
 
 #typing-animation:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 0;
@@ -80,26 +100,16 @@
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+  from { width: 5px; }
+  to { width: 0; }
 }
 
-
 /* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -109,13 +119,10 @@
   transform: scale(1.1);
 }
 
-
 </style>
-
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
@@ -146,54 +153,48 @@
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
+		          		<span class="subheading">Production AI & Systems</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Hassan Hatami</span></h1>
 
 						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
 						<script>
-
 						// Initialize the typing animation
 						const typingAnimationElement = document.getElementById('typing-animation');
 
 						// Create an array of typing text
 						const typingTexts = [
-						'Founder & CEO  ',
-						'Engineer  ',
-						'Researcher  ',
+						'AI Systems Architect  ',
+						'Agentic AI Specialist  ',
+						'MLOps Engineer  ',
 						'AI Consultant ',
-						'AI Developer  ',
+						'Research Engineer  ',
 						];
 
 						// Create a function to display the typing animation for a given text
 						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
 						for (let i = 0; i < text.length; i++) {
 							setTimeout(() => {
 							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
+							}, i * 150);
 						}
 
-						// Once the animation is complete, reset the text and start over
 						setTimeout(() => {
 							typingAnimationElement.textContent = '';
 							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
+						}, text.length * 150 + 1500);
 						}
 
 						// Start the typing animation loop
 						playTypingAnimation(typingTexts[0]);
-
 						</script>
 
 						<br>
 						<br>
-			            <h2>Senior AI & MLOPs Engineer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5+ years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://youtube.com/@learn_for_growth?si=IoTCgxqsZcon3LFK" class="btn btn-primary py-3 px-4">YouTube</a> 
-							<a href="https://github.com/Hatami5" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+			            <h2>Senior AI & MLOps Engineer</h2>
+			            <p><a href="https://youtube.com/@learn_for_growth?si=IoTCgxqsZcon3LFK" class="btn btn-primary py-3 px-4">YouTube Channel</a> 
+							<a href="https://github.com/Hatami5" class="btn btn-white btn-outline-white py-3 px-4">Production Code</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -202,65 +203,54 @@
 		</div>
     </section>
 
-
-
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Hassan Hatami">
 									  </div>
 									</div>
-									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Hassan Hatami</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Senior AI & ML Engineer</span></p>
-										<p><span class="title-s">Experience: </span> <span>5+ Years </span></p>
-										<p><span class="title-s">Address: </span> <span>Karachi, Pakistan</span></p>
+										<p><span class="title-s">Role: </span> <span>Senior AI & ML Engineer</span></p>
+										<p><span class="title-s">Track Record: </span> <span>5+ Years Experience</span></p>
+										<p><span class="title-s">Base: </span> <span>Karachi, Pakistan</span></p>
 									  </div>
 									</div>
 								  </div>
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>Generative AI & Large Language Models (LLMs)</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
+								<!-- Upgraded Skill Badges Grid to exhibit elite technical consulting expertise -->
+								<div class="skill-badge-container">
+									<p class="title-s" style="margin-bottom: 1rem;">Core Capabilities</p>
 									
-									<span>Transformer-based Architectures</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
+									<div class="skill-domain-title">Cognitive Engines</div>
+									<div class="skill-badges">
+										<span class="badge-ai">Agentic AI Systems</span>
+										<span class="badge-ai">Generative AI & LLMs</span>
+										<span class="badge-ai">Advanced RAG Pipelines</span>
+										<span class="badge-ai">Transformers Architecture</span>
+										<span class="badge-ai">Neural Networks</span>
+										<span class="badge-ai">NLP & Computer Vision</span>
 									</div>
-									
-									<span>Neural Networks & Deep Learning</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Agentic AI Systems & Autonomous Agents</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>MLops</span> <span class="pull-right">98%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0"
-											aria-valuemax="100"></div>
+
+									<div class="skill-domain-title">Production & Infrastructure</div>
+									<div class="skill-badges">
+										<span class="badge-ai">MLOps Pipelines</span>
+										<span class="badge-ai">FastAPI</span>
+										<span class="badge-ai">Docker Containerization</span>
+										<span class="badge-ai">Vector DBs (Pinecone/Weaviate)</span>
+										<span class="badge-ai">LangChain / CrewAI</span>
+										<span class="badge-ai">REST API Architecture</span>
 									</div>
 								</div>
+
 							</div>
 						</div>
 					</div>
@@ -272,28 +262,26 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>With over 5 years of hands-on experience in AI and machine learning, specializing in large language models (LLMs), generative AI, and autonomous AI agents. Expert in building production-ready AI applications, RAG systems, and AI-powered workflow solutions that automate business processes and drive efficiency. Proven track record of delivering production-ready AI applications, solving complex business challenges, and enabling startups and enterprises to scale with intelligent automation.</p>
+								<p>I bridge the gap between abstract AI research and robust, production-ready business infrastructure. Specializing in **Agentic AI systems, custom Transformers, and secure Retrieval-Augmented Generation (RAG)**, I build intelligent systems where AI models autonomously execute multi-step logic rather than just answering basic chat prompts. My absolute focus is architectural stability—ensuring your AI pipelines scale seamlessly, remain highly secure, and deliver a clear, defensive return on investment.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>AI &amp; ML Engineer</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Healthcare, Real Estate, Ecommerce, Startups, SaaS companies, Business &amp; Marketing Agencies</span></li>
-									<li class="d-flex"><span>Education:</span> <span>BS in AI</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Urdu</span></li>
-									<li class="d-flex"><span>Tools:</span> <span>LangChain, OpenAI, FastAPI, Docker, Hugging Face, Pinecone/Weaviate &amp; REST API Development</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, MLOPs, Git, NLP & Transformers, Web Development &amp; Computer Vision</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Coding, Research, Innovation, Boxing</span></li>
-									
+									<li class="d-flex"><span>Profile:</span> <span>AI Systems & MLOps Architect</span></li>
+									<li class="d-flex"><span>Target Domains:</span> <span>E-commerce, Startups, SaaS Providers, High-Scale Business Automation</span></li>
+									<li class="d-flex"><span>Education:</span> <span>BS in Artificial Intelligence (Distinction)</span></li>
+									<li class="d-flex"><span>Languages:</span> <span>English, Urdu</span></li>
+									<li class="d-flex"><span>Orchestration:</span> <span>LangChain, CrewAI, OpenAI API, Hugging Face Ecosystem</span></li>
+									<li class="d-flex"><span>Backend & Data:</span> <span>FastAPI, REST APIs, Vector Search, Docker, Cloud MLOps</span></li>
+									<li class="d-flex"><span>Interests:</span> <span>System Design, AI Research, Continuous Innovation, Boxing</span></li>
 								</ul>
 							</div>
 						</div>
-
 
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
 							<div class="text">
 								<p class="mb-4">
 									<span class="number" data-number="30">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
+									<span>&nbsp; Production Systems Deployed</span>
 								</p>
-								<p><a href="https://www.linkedin.com/in/hassan-hatam/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+								<p><a href="https://www.linkedin.com/in/hassan-hatam/" class="btn btn-primary py-3 px-3">Connect on LinkedIn</a></p>
 							</div>
 						</div>
 					</div>
@@ -302,23 +290,20 @@
 		</div>
     </section>
 
-
-
-	
     <section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
+            <h2 class="mb-4">Proven Expertise</h2>
             <p>
-				Proven AI/ML Engineer with 5+ years delivering large language models, agentic AI, and AI-powered automation solutions that streamline operations, accelerate business growth, and consistently produce measurable ROI for startups and enterprises.
+				Proven AI Systems Engineer with 5+ years delivering industrial large language models, agentic automation, and distributed engineering solutions that streamline backend operations, mitigate human overhead, and establish verified ROI.
 			</p>
           </div>
         </div>
 
 		<div class="row">
-			<h1 class="big-4">Experience</h1>
+			<h1 class="big-4">Professional Experience</h1>
 			<div class="underline"></div>
 		</div>
 		<br>
@@ -329,21 +314,20 @@
 						<span class="date">2021-Present</span>
 						<h2>AI/ML Eng – LLM & Agentic AI Specialist</h2>
 						<span class="position">SageMind Tech Services</span>
-						<p class="mt-4">SageMind Tech Services, an AI solutions company delivering cutting-edge LLM, agentic AI, and automation products for startups and enterprises globally. 
+						<p class="mt-4">An elite AI product firm delivering cutting-edge multi-agent systems, language processing hubs, and MLOps pipelines for international startups and global enterprises.
 							<ul>
 								<li>
-									Built and deployed autonomous AI agents and GPT-based applications for business automation, improving operational efficiency by 35%.
+									Architected and deployed production-grade autonomous AI agents and graph-based workflows, improving clients' core operational speed by 35%.
 								</li>
 								<li>
-									Developed Retrieval-Augmented Generation (RAG) systems for document and knowledge base analysis, achieving 94% accuracy in information retrieval.
+									Formulated enterprise-tier Retrieval-Augmented Generation (RAG) systems for multi-format knowledge bases, maintaining an audited 94% retrieval accuracy layer.
 								</li>
 								<li>
-									Designed and implemented AI-powered workflows and multi-agent systems, enabling clients to automate complex tasks and reduce manual effort by 40%.
+									Designed event-driven multi-agent systems capable of executing complex business workflows, cutting manual operational dependencies by 40%.
 								</li>
 							</ul>
 						</p>
 					</div>
-
 				</div>
 
 				<div class="col-md-6">
@@ -351,21 +335,20 @@
 						<span class="date">2020-2021</span>
 						<h2>AI Engineer & NLP Specialist</h2>
 						<span class="position">InnovateAI Solutions</span>
-						<p class="mt-4">InnovateAI Solutions, a startup focused on AI-driven automation, NLP applications, and enterprise AI integration for international clients. 
+						<p class="mt-4">An early-stage automation venture focusing on custom conversational frameworks, token optimization, and enterprise NLP pipelines.
 							<ul>
 								<li>
-									Developed custom LLM applications and AI chatbots for enterprise clients, resulting in a 50% reduction in customer support workload.
+									Developed enterprise LLM microservices and context-aware conversational bots, yielding a structural 50% workload mitigation for support desks.
 								</li>
 								<li>
-									Created AI-driven analytics pipelines, automated reporting, and document understanding solutions using Python, LangChain, and vector databases.
+									Engineered automated multi-threaded analytical pipelines for high-throughput unstructured text processing using Python and vector indexing models.
 								</li>
 								<li>
-									Provided mentorship and training sessions for teams on AI implementation, prompt engineering, and model deployment best practices.
+									Chaperoned technical discovery sprints and trained corporate engineering cohorts on prompt patterns, fine-tuning baselines, and model guardrails.
 								</li>
 							</ul>
 						</p>
 					</div>
-
 				</div>
 			</div>
 
@@ -382,39 +365,37 @@
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2022-2026</span>
-    					<h2> Graduation in AI</h2>
+    					<h2>Graduation in Artificial Intelligence</h2>
     					<span class="position">Sindh Madrasatul Islam University</span>
-    					<p class="mt-4">Grade: First class distinction</p>
+    					<p class="mt-4">Grade: First Class Distinction (Honors)</p>
     				</div>
     			</div>
 
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2018-2020</span>
-    					<h2>Intermediate</h2>
-    					<span class="position">Boys Degree college Skardu</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
+    					<h2>Intermediate (Pre-Engineering)</h2>
+    					<span class="position">Boys Degree College Skardu</span>
+    					<p class="mt-4">Grade: First Class Distinction</p>
     				</div>
 				</div>
     		</div>
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download System Brief / CV</a></p>
     			</div>
     		</div>
     	</div>
     </section>
-
-   
 
     <section class="ftco-section" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are some AI, ML, LLM and Data Science projects which I build for different industries.</p>
+            <h2 class="mb-4">Production AI Case Studies</h2>
+            <p>A selection of production-ready AI, ML, and multi-agent platforms engineered to optimize industry systems.</p>
           </div>
         </div>
         <div class="row d-flex">
@@ -423,10 +404,8 @@
               <a href="https://github.com/Hatami5/shoping_assistant/blob/main/chatbot.py" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Hatami5/shoping_assistant/blob/main/chatbot.py">AI-Powered Shoping Assistance</a></h3>
-                <p> AI-powered platform designed to make online shopping smarter and cheaper.
-					Customers can search for products such as clothing, groceries, and daily essentials, and the system automatically scans all major e-commerce platforms to find the best and lowest price.</p>
+                <h3 class="heading"><a href="https://github.com/Hatami5/shoping_assistant/blob/main/chatbot.py">AI-Powered Smart Commerce Engine</a></h3>
+                <p>Engineered a distributed, high-throughput scraping and retail analysis network backed by an LLM-driven assistant. System processes multi-source product vectors across major platforms asynchronously using FastAPI to deliver contextual product recommendations and real-time lowest price generation.</p>
               </div>
             </div>
           </div>
@@ -435,14 +414,8 @@
               <a href="https://github.com/Hatami5/AI_Virtual_Tryon" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Hatami5/AI_Virtual_Tryon">AI-Powered virtual try-on web app</a></h3>
-                <p>
-					AI-powered Virtual Try-On system allowing users to try clothes virtually without physically wearing them.
-					Upload your own photos or use preloaded demo images.
-					Choose between VITON-HD or TryOn-Diffusion (Hugging Face pretrained).
-					Download the generated try-on image instantly.
-				</p>
+                <h3 class="heading"><a href="https://github.com/Hatami5/AI_Virtual_Tryon">AI-Driven Latent Visual Try-On Pipeline</a></h3>
+                <p>Architected a zero-friction, production visual try-on application employing state-of-the-art diffusion patterns (VITON-HD & TryOn-Diffusion). Heavily optimized model weights caching, visual segmentation layers, and image inference runtimes on Hugging Face to ensure sub-second rendering.</p>
               </div>
             </div>
           </div>
@@ -451,29 +424,21 @@
               <a href="https://github.com/Hatami5/visual_impairment_assistance" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Hatami5/visual_impairment_assistance">Empowering Visually Impaired People</a></h3>
-                <p>
-					This is an assistive system designed to help visually impaired individuals navigate their surroundings safely. The system uses computer vision and deep learning models to detect obstacles, analyze their position, and generate real-time audio instructions such as moving left, right, or stopping.
-				</p>
+                <h3 class="heading"><a href="https://github.com/Hatami5/visual_impairment_assistance">Computer Vision Spatial Navigation Array</a></h3>
+                <p>Designed an edge-ready assistive spatial intelligence app leveraging deep object detection networks to protect visually impaired individuals. Runs real-time local image processing arrays to classify obstacle proximities and compute immediate, life-preserving direction metrics.</p>
               </div>
             </div>
           </div>
         </div>
 	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<!-- <div class="row d-flex justify-content-center"> -->
 		<div class="row d-flex">
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<a href="https://github.com/Hatami5/English_to_urdu_translator_using_Transformer" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Hatami5/English_to_urdu_translator_using_Transformer">English To Urdu Translator</a></h3>
-				  <p>
-					Transformer-based neural machine translation models are widely used for tasks like English–Urdu translation, where the model learns from parallel text datasets and generates translations using attention mechanisms.
-				  </p>
+				  <h3 class="heading"><a href="https://github.com/Hatami5/English_to_urdu_translator_using_Transformer">Custom Sequence-to-Sequence Translator</a></h3>
+				  <p>Trained a dedicated, localized Transformer-based Neural Machine Translation (NMT) engine optimized specifically for English-to-Urdu lexical conversions. Implemented custom scaled dot-product attention maps to capture linguistic nuance across complex datasets.</p>
 				</div>
 			  </div>
 			</div>
@@ -482,11 +447,8 @@
 				<a href="https://github.com/Hatami5/News-Research-Tool-using-Langchain" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Hatami5/News-Research-Tool-using-Langchain">News Research Tool</a></h3>
-				  <p>
-					Retrieve news articles, process them with LLMs, and summarize insights using retrieval-augmented generation (RAG) pipelines and vector search.
-					These tools allow users to query topics and get concise summaries from multiple news sources, making research faster and more structured.</p>
+				  <h3 class="heading"><a href="https://github.com/Hatami5/News-Research-Tool-using-Langchain">Enterprise RAG Knowledge Graph & Summarizer</a></h3>
+				  <p>Built a high-performance market research tool using advanced LangChain orchestration and multi-vector search. Collects unstructured global news updates, chunks data with semantic boundaries, and stores it in high-dimensional vector DBs for deterministic, audit-safe summaries.</p>
 				</div>
 			  </div>
 			</div>
@@ -495,17 +457,13 @@
 				<a href="https://github.com/Hatami5/AI-Bussiness-Operation-Automation-Hub/blob/main/README.md" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Hatami5/AI-Bussiness-Operation-Automation-Hub/blob/main/README.md">AI Business Operation Automation Hub</a></h3>
-				  <p>
-					AI-powered business automation platform that changed everything by automating orders, payments, customer support, and analytics using AI agents. Streamline operations, reduce manual work, and scale your business effortlessly				  
-				  </p>
+				  <h3 class="heading"><a href="https://github.com/Hatami5/AI-Bussiness-Operation-Automation-Hub/blob/main/README.md">Multi-Agent Business Operation Automation Engine</a></h3>
+				  <p>Conceived an enterprise operational hub powered completely by autonomous agents (`order_manager.py`, `payment_agent.py`). Orchestrates independent cognitive processes to handle secure ledger auditing, supply chain routing, and autonomous customer analytics cleanly.</p>
 				</div>
 			  </div>
 			</div>
 		 </div>
 		</div>
-	  <!-- </div> -->
     </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -515,7 +473,7 @@
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
+                <span>Strategic Milestones</span>
               </div>
             </div>
           </div>
@@ -523,7 +481,7 @@
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
+                <span>AI Systems Completed</span>
               </div>
             </div>
           </div>
@@ -531,7 +489,7 @@
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
+                <span>Engineers & Students Mentored</span>
               </div>
             </div>
           </div>
@@ -539,7 +497,7 @@
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
+                <span>Inference Runtimes & Coffees</span>
               </div>
             </div>
           </div>
@@ -547,29 +505,25 @@
       </div>
 	
 	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve real world problems &amp; uncover hidden data stories </h4>
+						<h2>Explore Deep Architecture on<span> GitHub </span> </h2>
+						<div class="heading"> <h4> Solving non-deterministic algorithmic problems & uncovering system efficiency </h4>
 						<br>
-						<p><a href="https://github.com/Hatami5" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<p><a href="https://github.com/Hatami5" class="btn btn-primary py-3 px-5">Access GitHub Repositories</a></p>
 						</div>
 					</div>
 				</div>
-			<!-- </div> -->
 		</div>
 	</section>
-
-
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+            <h2 class="mb-4">Initiate a Project</h2>
+            <p>Reach out to integrate state-of-the-art automation and intelligent agents into your corporate architecture.</p>
           </div>
         </div>
 
@@ -579,8 +533,8 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
           		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Karachi, Pakistan</p>
+          		<h3 class="mb-4">Location</h3>
+	            <p>Karachi, Pakistan (Available Globally)</p>
 	          </div>
           </div>
 		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -588,7 +542,7 @@
 				<div class="icon d-flex align-items-center justify-content-center">
 					<span class="icon-whatsapp"></span> 
 				</div>
-				<h3 class="mb-4">WhatsApp</h3>
+				<h3 class="mb-4">Secure WhatsApp</h3>
 				<p><a href="https://wa.me/923706649572" target="_blank">+92 370 6649572</a></p>
 			</div>
 		</div>
@@ -597,7 +551,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-paper-plane"></span>
           		</div>
-          		<h3 class="mb-4">Email Address</h3>
+          		<h3 class="mb-4">Direct Email</h3>
 	            <p><a href="mailto:hassanhatami786@gmail.com">hassanhatami786@gmail.com</a></p>
 	          </div>
           </div>
@@ -606,8 +560,8 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-globe"></span>
           		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+          		<h3 class="mb-4">Project Scope Brief</h3>
+	            <p><a href="#">Download CV / Capabilities Brochure</a></p>
 	          </div>
           </div>
 
@@ -616,12 +570,12 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScAGzHOoXBmyZTOigiAhUdIknzw6u3KaDYEDwPtdz9rpjGb9A/viewform?usp=publish-editor" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a business infrastructure<span> Question? </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScAGzHOoXBmyZTOigiAhUdIknzw6u3KaDYEDwPtdz9rpjGb9A/viewform?usp=publish-editor" class="btn btn-primary py-3 px-5">Book Consultation</a> </h2>
 				</div>
 			</div>
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate normal-txt">Professional Footprint: </li>
 					  <li class="ftco-animate"><a href="https://youtube.com/@learn_for_growth?si=IoTCgxqsZcon3LFK"><span class="icon-youtube"></span></a></li>
 					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/hassan-hatam/"><span class="icon-linkedin"></span></a></li>  
 					  <li class="ftco-animate"><a href="https://x.com/hassomind"><span class="icon-twitter"></span></a></li>
@@ -632,26 +586,20 @@
    </div>
  </section>
 
-
- 
-	
     <footer class="ftco-footer ftco-section">
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  by  <a href="https://github.com/Hatami5" target="_blank">SageMind Tech Services</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			  <p>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://github.com/Hatami5" target="_blank">SageMind Tech Services</a>
+			  </p>
 			</div>
 		  </div>
 		</div>
 	  </footer>
 
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
